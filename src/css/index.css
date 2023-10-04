@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+:root {
+      --color-principal: #222;
+      --color-secundario: #868787;
+      --color-terciario: #f8f8f8;
+    
+      /* Colores para el modo oscuro */
+}
+
+body.dark-mode {
+  --color-principal: #f8f8f8;
+  --color-secundario: #868787;
+  --color-fondo: #222;
+}
+
+body:not(.dark-mode) {
+    --color-principal: #222;
+    --color-secundario: #868787;
+    --color-fondo: #f8f8f8;
+}
+
+
+body {
+    background-color: var(--color-fondo);
+}
+  
