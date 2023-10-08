@@ -76,7 +76,7 @@ function DarkMode({ isDarkMode, setIsDarkMode }) {
     return (
         <ContainerStyled>
             <LabelStyled>
-                <input type="checkbox" onChange={handleDarkModeToggle} />
+                <input type="checkbox" id='darkmodeButton' onChange={handleDarkModeToggle} />
                 <img src={sunny} alt="sun" className='sun' />
                 <img src={moon} alt="moon" className='moon' />
                 <span className="toggle"></span>

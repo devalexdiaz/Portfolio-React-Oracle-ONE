@@ -32,8 +32,6 @@ const StyledFooter = styled.div`
   position: relative;
   max-width: 100vw;
   background: var(--color-principal);
-  height: 13.6vh;
-  padding: 20px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,38 +42,57 @@ const StyledFooter = styled.div`
   }
 `;
 
-const Wave = styled.div`
+
+const Wave1 = styled.div`
   position: absolute;
   top: -100px;
   left: 0;
   width: 100%;
   height: 100px;
-  background: url('${props => (props.isDarkMode ? waveDark : waveLight)}');
+  background: url('${props => (props['data-isdarkmode'] ? waveDark : waveLight)}');
   background-size: 1000px 100px;
-`;
-
-const Wave1 = styled(Wave)`
   z-index: 997;
   opacity: 1;
   bottom: 0;
   animation: ${animateWave} 8s linear infinite;
 `;
 
-const Wave2 = styled(Wave)`
+const Wave2 = styled.div`
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('${props => (props['data-isdarkmode'] ? waveDark : waveLight)}');
+  background-size: 1000px 100px;
   z-index: 996;
   opacity: 0.5;
   bottom: 10px;
   animation: ${animateWave_02} 8s linear infinite;
 `;
 
-const Wave3 = styled(Wave)`
+const Wave3 = styled.div`
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('${props => (props['data-isdarkmode'] ? waveDark : waveLight)}');
+  background-size: 1000px 100px;
   z-index: 997;
   opacity: 0.2;
   bottom: 15px;
   animation: ${animateWave} 5s linear infinite;
 `;
 
-const Wave4 = styled(Wave)`
+const Wave4 = styled.div`
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('${props => (props['data-isdarkmode'] ? waveDark : waveLight)}');
+  background-size: 1000px 100px;
   z-index: 996;
   opacity: 0.7;
   bottom: 20px;
@@ -164,10 +181,10 @@ export default function Footer() {
   return (
     <StyledFooter>
       <div key={key}>
-        <Wave1 isDarkMode={isDarkMode} />
-        <Wave2 isDarkMode={isDarkMode} />
-        <Wave3 isDarkMode={isDarkMode} />
-        <Wave4 isDarkMode={isDarkMode} />
+        <Wave1 data-isdarkmode={isDarkMode} />
+        <Wave2 data-isdarkmode={isDarkMode} />
+        <Wave3 data-isdarkmode={isDarkMode} />
+        <Wave4 data-isdarkmode={isDarkMode} />
       </div>
       <SocialIconList>
         <SocialIconItem>
@@ -193,27 +210,27 @@ export default function Footer() {
       </SocialIconList>
       <MenuFooterList>
         <li>
-          <FooterLink isDarkMode={isDarkMode} to="/">
+          <FooterLink to="/">
             Inicio
           </FooterLink>
         </li>
         <li>
-          <FooterLink isDarkMode={isDarkMode} to="/about">
+          <FooterLink to="/about">
             Sobre Mi
           </FooterLink>
         </li>
         <li>
-          <FooterLink isDarkMode={isDarkMode} to="/skills">
+          <FooterLink to="/skills">
             Skills
           </FooterLink>
         </li>
         <li>
-          <FooterLink isDarkMode={isDarkMode} to="/formacion">
+          <FooterLink to="/formacion">
             Formación
           </FooterLink>
         </li>
         <li>
-          <FooterLink isDarkMode={isDarkMode} to="/proyectos">
+          <FooterLink to="/proyectos">
             Proyectos
           </FooterLink>
         </li>

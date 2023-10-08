@@ -11,7 +11,7 @@ const StyledHome = styled.div`
 `;
 
 const HeroDiv = styled.div`
-  height: 70vh;
+  height: 68.6vh;
   max-width: 1200px;
   width: 90vw;
   margin: 0 auto;

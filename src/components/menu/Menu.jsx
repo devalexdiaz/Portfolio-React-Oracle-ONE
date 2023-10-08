@@ -9,6 +9,7 @@ import { NavLink, Link } from 'react-router-dom';
 const Nav = styled.nav`
   background-color: var(--color-fondo);
   padding-top: 5px;
+  height: 6vh;
 `;
 
 const ContainerNav = styled.div`
@@ -103,6 +104,9 @@ const Overlay = styled.div`
   background-color: var(--color-principal);
   overflow: hidden;
   transition: all 0.3s ease 0s;
+  &.dark-mode {
+    background-color: var(--color-secundario);
+  }
 `;
 
 const OverlayContent = styled.div`
@@ -110,7 +114,12 @@ const OverlayContent = styled.div`
   height: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
+  &.dark-mode {
+    a:hover{
+      color: var(--color-principal);
+    }
+  } 
   a {
     padding: 15px;
     font-size: 36px;
@@ -139,6 +148,11 @@ const CloseButton = styled.a`
   color: var(--color-fondo);
   text-decoration: none;
   cursor: pointer;
+  &.dark-mode {
+    &:hover{
+      color: var(--color-principal);
+    }
+  } 
   &:hover {
     color: var(--color-secundario);
   }
